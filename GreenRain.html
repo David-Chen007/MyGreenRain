@@ -16,7 +16,8 @@
       background(0);
 
       var x = 0;
-      for (var i = 0; i <= width / symbolSize; i++) {
+      if (invert) { var HorW = height } else var HorW = width;
+      for (var i = 0; i <= HorW / symbolSize; i++) {
         var stream = new Stream();
         stream.generateSymbols(x, random(-2000, 0));
         streams.push(stream);
